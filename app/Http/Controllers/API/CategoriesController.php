@@ -11,7 +11,7 @@ class CategoriesController extends BaseController
 {
     
     public function index()
-    {
+    {  
         $data = Categories::orderBy('name','ASC')->get();
         return $this->sendResponse(CategoriesResource::collection($data), 'Categorias Recuperadas Correctamente.');
     }
